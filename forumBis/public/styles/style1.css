@@ -1,0 +1,244 @@
+:root {
+    --main-color: rgb(150,150,150,0.5);
+    --color: black;
+  }
+*{
+    box-sizing: border-box;
+}
+body{
+    margin: 0;
+    background:white;
+    font-family: 'Open Sans', sans-serif;
+}
+ul{
+    list-style: none;
+    padding: 0;
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+.error{
+ font-size: 1.5em; 
+ color:red;
+ /* border: 3px solid red; */
+ box-shadow: 1px 1px 1px;   
+}
+.success{
+    font-size: 1.5em; 
+    color:green;
+    /* border: 3px solid red; */
+    box-shadow: 1px 1px 1px; 
+}
+.list_sujet{
+    padding: 1em;
+    flex: 1;
+}
+.list_message{
+    flex:1;
+}
+.list a li{
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid black;
+    padding-bottom:0.5em;
+    margin-bottom: 1em;
+    background: white;
+    align-items: center;
+}
+.container{
+    /* width: 75%; */
+    margin: auto;
+    text-align: center;
+    background: white;
+    /* margin-top: -1em; */
+}
+.home{
+    padding: 1em;
+    width: 25%;
+    text-align: left;
+}
+.content,.sticky,.head{
+    display :flex;
+    justify-content: space-between;
+}
+.sticky{
+    position: sticky;
+    top: 0;
+    padding: 1em;
+    background: black;
+    color: white;
+}
+.crea_mess,.users{
+    position: sticky;
+    top:15em;
+}
+.crea_sujet{
+    position: sticky;
+    top:10em;
+}
+.connect {
+    position: sticky;
+    top:28em;
+}
+
+.sticky a{
+    color: white;
+}
+.head{
+    align-items: center;
+    width: 50%;
+}
+.users{
+    height: 12.5em;
+    overflow-y: scroll;
+    border-radius: 15px;
+    text-align: center;
+    border:2px solid green;
+    padding: 1em;
+    /* display: flex;
+    flex-wrap: wrap; */
+}
+.deleteUser{
+    display: flex;
+    justify-content: space-evenly;
+    padding: 0.5em;
+    border-bottom:2px solid green;
+}
+.del_user span{
+    flex: 1;
+}
+
+.users h4{
+    margin-top: 0;
+}
+.users::-webkit-scrollbar{
+    display: none;
+}
+.sujet_style{
+    width: 100%;
+    text-align: left;
+}
+.sujet_style > div:first-child{
+    padding: 0.5em;
+    font-size: 1.5em;
+}
+.author{
+    display: flex;
+    /* justify-content: space-between; */
+    padding: 0 1em;
+}
+.author div{
+    margin-right: 2em;
+}
+
+.form_flex{
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    margin: auto;
+}
+.form_flex input{
+    margin-bottom: 1em;
+    line-height: 3em;
+    background: #aaa;
+    border:1px solid green;
+    border-radius: 15px;
+    padding:0 0.5em;
+}
+.message > div:first-child{
+    text-align: left;
+    border: 1px solid #aaa;
+    padding: 1em;
+    background: green;
+    color: white;
+    font-weight: bold;
+    border-radius: 15px;
+}
+.bordure{
+    margin-bottom: 3em;
+    border-bottom:1px solid green;
+    padding: 1em;
+    /* border-radius: 15px; */
+}
+p.bordure{
+    border:1px solid green;
+    font-weight: bold;
+}
+p.bordure a{
+    color: green;
+}
+.bordure >div:nth-child(2){
+    border: 1px solid #aaa;
+    border:2px solid green;
+    margin-top: 1em;
+}
+.head_mess{
+    display: flex;
+    justify-content: space-between;
+    background: rgb(0,128,0,0.5);
+    padding: 0 1em;
+    border-radius: 15px;
+}
+.affich{
+    position:fixed;
+    top: 10em;
+    right: 11em;
+    width: 25%;
+    background: white;
+    border: 1px solid green;
+    z-index: 1;
+}
+.signal{
+    background: white;
+    color: black;
+}
+.affich div{
+    margin: 1em;
+    border: 1px solid green;
+}
+.content_sub{
+    flex:1;
+    width: 80%;
+    text-align: center;
+}
+.content_sub p{
+    text-align: center;
+}
+.post{
+    text-align: center;
+}
+form{
+    padding: 1em;
+}
+@media screen and (max-width: 640px) {
+    .content,.sticky,.head{
+        display :flex;
+        justify-content: space-between;
+        flex-direction: column;
+    }
+    .sticky h1{
+        font-size: 1.5em;
+    }
+    .head{
+        margin:auto;
+    }
+    .home{
+        width: 100%;
+       
+    }
+    .list li a{
+        flex-direction: column;
+    }
+    .crea_sujet {
+        top: 15em;
+    }
+    .author{
+        flex-direction: column-reverse;
+    }
+    .affich{
+        width: 50%;
+        right: 6em;
+        top:16em;
+    }
+  }
